@@ -24,11 +24,11 @@ estoy 100% seguro de este último).
 
 Aquí hay un ejemplo de un programa creado en **JsFiddle** con el resultado en la consola de Google Chrome:
 
-[![Has clic para agrandizar](/images/2-chrome-console.png)](/images/2-chrome-console.png "Has clic para agrandizar")
+[![Has clic para agrandizar]({{ site.baseurl }}/images/2-chrome-console.png)]({{ site.baseurl }}/images/2-chrome-console.png "Has clic para agrandizar")
 
 Y el mismo programa, ejecutado desde Mozilla Firefox:
 
-[![Has clic para agrandizar](/images/2-firefox-console.png)](/images/2-firefox-console.png "Has clic para agrandizar")
+[![Has clic para agrandizar]({{ site.baseurl }}/images/2-firefox-console.png)]({{ site.baseurl }}/images/2-firefox-console.png "Has clic para agrandizar")
 
 Iré explicando qué hacer y qué botones pulsar cuando llegue el momento, así que vamos a calmarnos, 
 poner un poco de música y empezar.

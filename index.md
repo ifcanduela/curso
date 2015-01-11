@@ -3,7 +3,7 @@ layout: default
 title: Inicio
 ---
 
-<p style="text-align:center"><img src="/images/vasca.jpg" alt="Mi tipo de chica" title="Mi tipo de chica"></p>
+<p style="text-align:center"><img src="{{ site.baseurl }}/images/vasca.jpg" alt="Mi tipo de chica" title="Mi tipo de chica"></p>
 
 # Curso de programación para Vascas
 
