@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>2. Variables y números / Curso / ifcanduela.github.com</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <script src="/javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <div id="nav">
+            <h1 class="header"><a href="/">Curso</a></h1>
+            <p class="header"></p>
+
+            <div class="column">
+                <h4>Lecciones</h4>
+                
+                <ul class="nav">
+    <li><a href="/lecciones/1">Introducción</a></li>
+    <li><a href="/lecciones/2">Variables y números</a></li>
+</ul>
+
+            </div>
+
+            <div class="column">
+                <h4>Links</h4>
+                
+                <ul>
+                    <li><a href="http://www.codecademy.com/">CodeCademy</a></li>
+                    <li><a href="http://jsfiddle.net/">JsFiddle</a></li>
+                    <li><a href="https://github.com/ifcanduela/">Github</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <section>
+            
+                <h1 class="page-title">2. Variables y números</h1>
+            
+            
+            <div class="page-content">
+                <p>Vamos a empezar a programar con los primero elementos de la sintaxis de un lenguaje de programación: 
+operadores e identificadores. Palabras raras como esas van a ser el pan de cada día, así que cuanto 
+antes nos familiaricemos con ellas, mejor. En esta lección veremos cómo se escribe un programa sencillo que
+usa operaciones matemáticas sencillas para calcular valores. El programa en sí es inútil; nadie
+va a usar JavaScript para hacer cálculos sencillos, pero como ejemplo ilustrativo va a ser muy útil.</p>
+
+<blockquote>
+  <p>Es muy recomendable terminar la primera lección del curso de JavaScript de CodeCademy antes de leer 
+esta lección. un montón de texto no es la mejor manera de aprender a programar, por muchos ejemplos
+que tenga. Este texto va a ser más fácil de entender después de hacer algunos ejemplos prácticos, y va a
+ayudar (en teoría) a dar una forma más concreta a las muchas de las cosas que se hacen en COdeCademy.</p>
+</blockquote>
+
+<h2 id="preparativos">Preparativos</h2>
+
+<p>Vamos a escribir algo de <em>código fuente</em>, pero ¿dónde? Usaremos una aplicación web llamada 
+<a href="http://jsfiddle.net/">JsFiddle</a> para escribir JavaScript, y veremos los resultados en el 
+mismo navegador, abriendo las <strong>herramientas de desarrollo</strong> con la tecla <code>F12</code> y seleccionando
+<em>Console</em> (o la variedad regional apropiada, como <em>Konsola</em> en Euskal Herria o <em>הסוגר</em> en Israel — no
+estoy 100% seguro de este último).</p>
+
+<p>Aquí hay un ejemplo de un programa creado en <strong>JsFiddle</strong> con el resultado en la consola de Google Chrome:</p>
+
+<p><a href="/images/2-chrome-console.png" title="Has clic para agrandizar"><img src="/images/2-chrome-console.png" alt="Has clic para agrandizar" /></a></p>
+
+<p>Y el mismo programa, ejecutado desde Mozilla Firefox:</p>
+
+<p><a href="/images/2-firefox-console.png" title="Has clic para agrandizar"><img src="/images/2-firefox-console.png" alt="Has clic para agrandizar" /></a></p>
+
+<p>Iré explicando qué hacer y qué botones pulsar cuando llegue el momento, así que vamos a calmarnos, 
+poner un poco de música y empezar.</p>
+
+<blockquote>
+  <p>Este es un buen momento para visitar el aseo, porque lo que viene
+a continuación es difícil que te cagas.</p>
+</blockquote>
+
+<script>
+    var nombre = "Sabin Arana ta Goiri";
+</script>
+
+<p>Suponiendo que Firefox o Chrome está abierto y estás leyendo esta página, haz lo siguiente:</p>
+
+<ol>
+  <li>Pulsa la tecla <code>F12</code> de tu teclado.</li>
+  <li>En el panel que ha aparecido en pantalla, busca la palabra <em>Console</em> (o la traducción correspondiente) y haz clic en ella para cambiar al modo de consola interactiva. </li>
+  <li>Asegúrate de que hay un cursor parpadeando en pantalla y teclea <code>nombre</code>.</li>
+  <li>Pulsa la tecla <code>Enter</code> de tu teclado.</li>
+</ol>
+
+<p>El resultado de seguir esos pasos es que el navegador te responde con el nombre de alguien importante. Ey, eso tiene que ser un programa, ¿no? Sí. Sí, pero lo importante es que este proceso es el que vamos a seguir
+para aprender algunas cosas acerca de la sintaxis de JavaScript.</p>
+
+<h2 id="nuestro-primer-programa-es-decepcionante">Nuestro primer programa es… decepcionante</h2>
+
+<p>Teclear <code>nombre</code> y pulsar enter no se puede considerar un gran paso adelante; tendremos que hacer algo distinto, pero primero algo de teoría.</p>
+
+<p>JavaScript puede hacer cálculos matemáticos muy complicados. Todos los lenguajes de programación son,
+en esencia, calculadoras muy complicadas. En la Casio que tenías en la ikastola escribías un número,
+después un signo de suma, resta, multiplicación o división, y otro número. Al pulsar el botoncillo
+de <code>=</code>, el resultado aparecía en pantalla. JavaScript puede hacer lo mismo: si en lugar de teclear
+<code>nombre</code> y pulsar <code>Enter</code>, tecleas <code>2+2</code> y pulsas <code>Enter</code>, verás que el navegador te responde con el
+resultado (es <code>4</code>). Chrome (o Firefox) le ha pasado nuestro primer programa (<code>2+2</code>) al intérprete de 
+JavaScript, que lo ha procesado, lo ha dividido en sus partes constituyentes, las ha transformado y
+se las ha devuelto al navegador. Y ¿cuáles son esas partes constituyentes?</p>
+
+<h2 id="nmeros-y-operadores">Números y operadores</h2>
+
+<p>Nuestro primer programa se componía de 3 <em>símbolos</em></p>
+
+<ol>
+  <li>Un número entero, el <code>2</code>,</li>
+  <li>un signo <code>+</code>, y</li>
+  <li>otro número entero, igualito al primero.</li>
+</ol>
+
+<p>En términos de programación, esos números se llaman <em>valores literales</em>, y representan datos que se pueden
+escribir de manera sencilla. Son muy útiles para representar números, como el 2 o el 3.1415. Casi todos los
+lenguajes de programación nos dejan representar números igual que los representamos con papel y boli o
+en una calculadora.</p>
+
+<p>El signo <code>+</code> es un elemento de la sintaxis de JavaScript — algo que el lenguaje de programación simplemente <em>entiende</em>. En este caso, cuando JavaScript ve un signo <code>+</code> entre dos números, simplemente suma
+los números. No es adecuado decir que el signo <code>+</code> es un signo <em>“más”</em>, porque no sólo sirve para sumar. JavaScript es capaz de usar el signo <code>+</code> entre dos elementos que no son números, y es posible que el resultado sea totalmente válido. En la sintaxis de JavaScript, el signo <code>+</code> significa diferentes cosas
+en función del contexto. Hay más signos como <code>+</code>, y se llaman <strong>operadores</strong>. La cantidad de ellos puede ser un poco abrumadora:</p>
+
+<pre><code>= + - * / %
++= -= *= /= ++ --
+== != === !== &gt; &gt;= &lt; &lt;=
+&amp; | ^ ~ &amp;&amp; || &lt;&lt; &gt;&gt; !
+? : ' " . , ; ( ) []
+</code></pre>
+
+<p>Si te fijas, muchos de ellos son signos de puntuación; los operadores en un lenguaje de programación tienen
+un papel similar, porque suelen aparecer separando los demás elementos sintácticos del lenguaje.</p>
+
+<h2 id="este-nmero-me-lo-quedo">Este número me lo quedo</h2>
+
+<p>Seguro que recuerdas la gloriosa aparición de nuestro líder espiritual hace unos minutos, cuando invocamos su
+<code>nombre</code> en la consola del navegador. Al escribir <code>nombre</code> y pulsar Enter, JavaScript se pregunta si la 
+palabra <em>nombre</em> tiene algún significado. Normalmente no lo tiene, porque no hay nada definido en JavaScript
+con ese nombre. La palabra <code>nombre</code> es algo que he definido yo en esta página. Palabras como esta,
+creadas por el programador, se llaman <strong>variables</strong>, y se usan para guardar números u otros valores y poder
+usarlos en otras partes del programa. Teclea <code>numero = 2</code> en la consola del navegador y pulsa <code>Enter</code>. 
+Si a continuación tecleas <code>numero</code>, el navegador imprimirá <code>2</code>, porque JavaScript ha creado una palabra
+llamada <code>numero</code> y le ha asignado el valor del número entero <code>2</code>. Así, sin darle mucha importancia, 
+acabo de introducir un nuevo operador: el <em>operador de asignación</em>, <code>=</code>.</p>
+
+<p>Podemos ver estas palabras creadas por el programador como etiquetas. Si calculamos un número sumando
+otros dos números, y tenemos pensado usar el nuevo número, es muy útil poderlo usar con un nombre especial.</p>
+
+<blockquote>
+  <p>Alerta: ejemplo estúpido en camino.</p>
+</blockquote>
+
+<p>Si vamos a usar el resultado de sumar 2 más 2 a menudo, lo lógico será que almacenemos ese resultado en 
+algún sitio. Al fin y al cabo, no queremos estar calculándolo una y otra vez. Por eso podemos hacer algo como
+<code>cuatro = 2 + 2</code>, y en el futuro la palabra <code>cuatro</code> significará lo mismo que <code>2 + 2</code>.</p>
+
+<hr />
+
+<p>En el próximo episodio vamos a usar JsFiddle para hacer algo más que sumar números</p>
+
+            </div>
+        </section>
+        
+        <footer>
+            <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        </footer>
+    </div>
+
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
