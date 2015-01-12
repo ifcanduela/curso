@@ -6,7 +6,7 @@
 </ul>
 
 <ul class="nav">
-    {% for lesson in lessons %}
+    {% for lesson in site.lessons %}
         <li><a href="{{ site.baseurl }}/lecciones/{{ lesson.number }}">{{ lesson.title }}</a></li>
     {% endfor %}
 </ul>
