@@ -112,6 +112,25 @@ Si vamos a usar el resultado de sumar 2 más 2 a menudo, lo lógico será que al
 algún sitio. Al fin y al cabo, no queremos estar calculándolo una y otra vez. Por eso podemos hacer algo como
 `cuatro = 2 + 2`, y en el futuro la palabra `cuatro` significará lo mismo que `2 + 2`.
 
+Normalmente las variables se usan en lugar de valores calculados, y por
+eso es necesario *definirlas* (asignarles un valor) previamente. Algunos lenguages (como C o Java) requieren que las variables tengan un *tipo*:
+
+{% highlight java %}
+int doce = 12;
+{% endhighlight %}
+
+En realidad, las variables siempre tienen un tipo. Lenguajes como
+JavaScript o PHP son capaces de detectar el tipo de una variable a
+partir del tipo de los datos que asignamos:
+
+{% highlight js %}
+trece = 12 + 1;
+{% endhighlight %}
+
+En JavaScript, una variable creada como `trece` en el ejemplo anterior
+tendrá un tipo `Number`, que hace que se comporte como un número. Más 
+información acerca de tipos de datos en la próxima lección.
+
 ---
 
 En el próximo episodio vamos a usar JsFiddle para hacer algo más que sumar números

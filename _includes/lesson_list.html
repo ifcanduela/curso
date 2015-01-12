@@ -1,4 +1,12 @@
+---
+---
 <ul class="nav">
     <li><a href="{{ site.baseurl }}/lecciones/1">Introducción</a></li>
     <li><a href="{{ site.baseurl }}/lecciones/2">Variables y números</a></li>
+</ul>
+
+<ul class="nav">
+    {% for lesson in lessons %}
+        <li><a href="{{ site.baseurl }}/lecciones/{{ lesson.number }}">{{ lesson.title }}</a></li>
+    {% endfor %}
 </ul>

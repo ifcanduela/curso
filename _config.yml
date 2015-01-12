@@ -1,3 +1,13 @@
+baseurl: /curso
 highlighter: pygments
 layout: default
-baseurl: /curso
+lessons: 
+  - 
+    number: 1
+    title: Introducción
+  - 
+    number: 2
+    title: "Variables y números"
+  - 
+    number: 3
+    title: "Tipos de datos"
