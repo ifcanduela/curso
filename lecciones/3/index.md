@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos
+title: 3. Tipos de datos
 layout: default
 ---
 
@@ -14,9 +14,9 @@ no nos valen los números.
 String.fromCharCode(72, 111, 108, 97);
 {% endhighlight %}
 
-## Strings
+## Stringuificación
 
-Para representar texto tenemos algo llamado *Strings*. Cadenas de caracteres, 
+Para representar texto tenemos algo llamado *string*s. Cadenas de caracteres, 
 uno tras otro, que forman textos. A nivel técnico, todos los datos se almacenan 
 como números, pero los lenguajes de programación son capaces de reconocer secuencias
 de caracteres y realizar operaciones especiales con ellas. En la mayoría de lenguajes,
@@ -51,23 +51,128 @@ indicar el fin de los datos. Muchos lenguajes también permiten insertar dobles 
 en los datos usando un método llamado *secuencias de escapes*:
 
 {% highlight js %}
-var miNombre = "Juanito \"The Man\" Oiarzabal";
+var miNombre = "Juanito \"Animal\" Oiarzabal";
 {% endhighlight %}
 
 Muchos lenguajes permiten usar comillas simples también:
 
 {% highlight python %}
-miNombre = 'Talo con "txistorra"';
+miNombre = 'Talo con txistorra de la "güena"';
 {% endhighlight %}
 
-## Tipos de datos
+## Otros tipos de tipos de datos simples
 
 El caso es que para hacer programas, necesitamos usar diferentes formas de
-describir nuestros datos.
+describir nuestros datos. No todo es un número entero. Por ejemplo, el Pagasarri tiene 673,1 metros
+de alto. Por suerte quienquiera que inventase los lenguajes de programación de alto nivel pensó en
+la orografía vasca largo y tendido, y decidió que además de los números enteros y las cadenas de texto,
+los números decimales podrían ser muy útiles. Normalmente se llaman *float* o *double*, igual que los
+enteros se llaman *int* y las cadenas de texto se llaman *string*.
 
-Todos los lenguajes de programación<sup>1</sup> tienen algo llamado *palabras claves*. Son palabras
+## Con tipo y sin tipo
+
+En la lección 2 definimos un entero usando Java:
+
+{% highlight java %}
+int doce = 12;
+{% endhighlight %}
+
+y luego otro en JavaScript así:
+
+{% highlight js %}
+trece = 12 + 1;
+{% endhighlight %}
+
+JavaScript no requiere que especifiquemos el tipo de datos de una variable. De hecho, la misma variable
+puede almacenar diferentes tipos de datos en sucesión:
+
+{% highlight js %}
+trece = 12 + 1;
+trece = 13.0;
+trece = "XIII"
+{% endhighlight %}
+
+Cosas como esa no están permitidas en Java, porque en Java el tipo de una variable es * para siempre*. Y Java se encarga
+de comprobar, cada vez que usas una variable, que la usas en el contexto adecuado. PHP te permite hacer esto:
+
+{% highlight php %}
+$el_numero_uno = 1;
+$el_numero_doce = "12";
+$el_numero_trece = $el_numero_uno + $el_numero_doce;
+{% endhighlight %}
+
+Y funciona, a pesar de que `$el_numero_doce` es un *string* y no un número. Eso es porque PHP es un poco
+laxo con sus reglas. No pasa lo mismo en Java:
+
+{% highlight java %}
+int el_numero_uno = 1;
+string el_numero_doce = "12";
+int el_numero_trece = el_numero_uno + el_numero_doce;
+{% endhighlight %}
+
+Eso no va a funcionar, confía en mi que lo he probado. Vamos, lo probé una vez y no funcionó.
+
+## Que sí y que no
+
+A veces los números y las palabras sobran. Cuando te preguntan "¿A ganado el Athletic?", tú simplemente
+mueves la cabeza de un lado a otro. "¿Quieres más marmitako?". Mueves la cabeza de arriba a abajo. El
+mundo es más sencillo cuando puedes responder a todo con *bai* o *ez*. Los ordenadores, siendo de pocas
+palabras de toda la vida, están optimizados para decir que sí y que no:
+
+{% highlight java %}
+bool haGanadoElAthletic = false;
+bool quieresMasMarmitako = true;
+{% endhighlight %}
+
+El tipo de datos `bool` (booleano, a partir del apellido [un señor británico](http://es.wikipedia.org/wiki/George_Boole "George Boole")) se usa para representar valores que sólo pueden tener dos estados: sí o no, apagado o
+encendido, del Partido o no del Partido.
+
+Los booleanos son importantes porque muchas operaciones en un programa dependen
+de estados binarios, como comparaciones entre otros números. Los resultados de estas comparaciones suelen ser *verdadero* o *falso*, y se representan con valores del tipo *bool*.
+
+## Un txikiejemplo
+
+Combinando variables, tipos de datos y operadores se pueden crear pequeños programas
+que no cumplen ninguna función:
+
+{% highlight js %}
+var miNombre = "Igor";
+var miEdad = 12;
+var miAltura = 1.77;
+
+var yo = "Me llamo " + miNombre + ", tengo " + miEdad + " años y mido " + miAltura;
+{% endhighlight %}
+
+Las primeras tres líneas definen tres variables distintas, `miNombre`, `miEdad` y `miAltura`. 
+Usando el operador de asignación (`=`) *inicializamos* cada una de ellas con
+valores apropiados; un *string*, un *int* y un *float*, respectivamente.
+
+La última línea es diferente: creamos una nueva variable, `yo`, pero no le asignamos un valor directo. Puede ser un poco difícil de leer, pero por suerte podemos dividirlo en líneas:
+
+{% highlight js %}
+var yo = "Me llamo " 
+       + miNombre 
+       + ", tengo " 
+       + miEdad 
+       + " años y mido " 
+       + miAltura;
+{% endhighlight %}
+
+En este contexto, el operador `+` va a concatenar todos los trozos en un 
+solo *string*. El resultado será `"Me llamo Igor, tengo 12 años y mido 1.77"`;
+
+---
+
+Tras las variables y operadores vendrán las sentencias de control de flujo,
+que hacen que todo esto sea más interesante.
+
+<!--
+## Palabras clave
+
+Todos los lenguajes de programación<sup>1</sup> tienen algo llamado *palabras clave*. Son palabras
 que significan algo especial para el lenguaje. Por ejemplo, cuando JavaScript ve la palabra clave
 `function`, se prepara para leer la definición de un sub-programa. Cada lenguaje tiene diferentes
 palabras clave
 
-> <sup>1</sup>: Esto no es cierto. Por ejemplo Lisp no tiene palabras claves. List es *raro*.
+> <sup>1</sup>: Esto no es cierto. Por ejemplo Lisp no tiene palabras clave. Lisp es *raro*.
+-->
