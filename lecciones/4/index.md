@@ -9,6 +9,7 @@ Vamos a programar de verdad. Creo que lo mejor va a escriba un trozo de código 
 por línea.
 
 {% highlight php %}
+<?php
 
 $nombreDeLaPersona = "Garikoitz Subijana Lertxundi";
 $pesoTotal = 0;
@@ -22,6 +23,10 @@ echo $nombreDeLaPersona . ' pesa ' . $pesoTotal . ' kg.';
 {% endhighlight %}
 
 Esto es una versión simplificada de aquel ejemplo de la [lección 1](/lecciones/1/), ahora en PHP en lugar de JavaScript. Hay un montón nde cosas que ver.
+
+## Codigos!
+
+Los programas en PHP empiezan con `<?php`. Nada más. Normalmente es el único texto en la primera línea.
 
 ## Variables!
 
