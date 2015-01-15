@@ -124,11 +124,13 @@ bool haGanadoElAthletic = false;
 bool quieresMasMarmitako = true;
 {% endhighlight %}
 
-El tipo de datos `bool` (booleano, a partir del apellido [un señor británico](http://es.wikipedia.org/wiki/George_Boole "George Boole")) se usa para representar valores que sólo pueden tener dos estados: sí o no, apagado o
+El tipo de datos `bool` (booleano, a partir del apellido [un señor británico](http://es.wikipedia.org/wiki/George_Boole "George Boole"))
+se usa para representar valores que sólo pueden tener dos estados: sí o no, apagado o
 encendido, del Partido o no del Partido.
 
 Los booleanos son importantes porque muchas operaciones en un programa dependen
-de estados binarios, como comparaciones entre otros números. Los resultados de estas comparaciones suelen ser *verdadero* o *falso*, y se representan con valores del tipo *bool*.
+de estados binarios, como comparaciones entre otros números. Los resultados de estas comparaciones suelen
+ser *verdadero* o *falso*, y se representan con valores del tipo *bool*.
 
 ## Un txikiejemplo
 
@@ -147,7 +149,8 @@ Las primeras tres líneas definen tres variables distintas, `miNombre`, `miEdad`
 Usando el operador de asignación (`=`) *inicializamos* cada una de ellas con
 valores apropiados; un *string*, un *int* y un *float*, respectivamente.
 
-La última línea es diferente: creamos una nueva variable, `yo`, pero no le asignamos un valor directo. Puede ser un poco difícil de leer, pero por suerte podemos dividirlo en líneas:
+La última línea es diferente: creamos una nueva variable, `yo`, pero no le asignamos un valor directo. Puede ser un poco
+difícil de leer, pero por suerte podemos dividirlo en líneas:
 
 {% highlight js %}
 var yo = "Me llamo " 
@@ -160,6 +163,82 @@ var yo = "Me llamo "
 
 En este contexto, el operador `+` va a concatenar todos los trozos en un 
 solo *string*. El resultado será `"Me llamo Igor, tengo 12 años y mido 1.77"`;
+
+## Literalmente
+
+Todos estos tipos de datos tienen cosas en común: cada variable almacena un solo valor de un solo tipo,
+se pueden escribir fácilmente y hay operaciones con ellos que simplemente tienen sentido, como sumar dos
+números enteros o unir dos cadenas de texto. Como en el mundo real, cuando encontramos algo en común entre
+un montoncito grupo de cosas le ponemos una etiqueta. En este caso, a los enteros, los decimales, las cadenas
+y los booleanos se les suele llamar *primitivas*. Son datos que no se pueden descomponer más, la parte
+fundamental, indivisible de la información que los programas manejan.
+
+> En *C/C++* en lugar de `string` se usa `char`, que representa un solo carácter, y muchos `char`s componen
+un `string`, pero tanto JavaScript como PHP usan `string` como primitiva.
+
+Los tipos de datos primitivos se pueden representar usando notación *literal*; eso significa que el valor *5* se
+representa con un solo símbolo (el `5`), y el valor *Verdadero* se representa con un solo símbolo (`true`).
+Cuando quieres una variable que almacena el nombre más bonito del mundo simplemente escribes
+`string elNombreMasBonitoDelMundo = "Eguskine"`.
+
+La existencia de tipos primitivos es una buena pista acerca de la existencia de...
+
+## Tipos compuestos
+
+Pocos de nuestros programas van a gestionar una lista de números decimales. Lo común es que queramos
+representar algún concepto del mundo real, y esos conceptos suelen ser más complicados que un solo número.
+Para representar estos elementos necesitamos agrupar datos en formas claras que nos ayuden a entender lo
+que estamos haciendo. Por ejemplo, si queremos hacer un programa que gestione cocineros, podemos escribir esto:
+
+{% highlight js %}
+var cocinero_1_nombre = "Karlos Argiñano",
+    cocinero_1_año_de_nacimiento = 1753,
+    cocinero_1_alcohólico = true;
+
+var cocinero_1_nombre = "Juan Mari Arzak",
+    cocinero_1_año_de_nacimiento = 1942,
+    cocinero_1_alcohólico = false;
+{% endhighlight %}
+
+Pero no es manejable, especialmente en Euskal Herria, donde cualquiera es un cocinero digno de la guía Michelin. Los tipos compuestos
+son una solución práctica al problema:
+
+{% highlight js %}
+var cocineros = [
+        {
+            nombre: "Karlos Argiñano",
+            año_de_nacimiento: 1753,
+            lcohólico: true,
+        },
+        {
+            nombre: "Juan Mari Arzak",
+            año_de_nacimiento: 1942,
+            alcohólico: false,
+        },
+    ];
+{% endhighlight %}
+
+Eso de ahí arriba es un trozo de JavaScript. La variable cocineros es un `array`, que es una forma técnica de decir * lista*, y esta lista contiene dos
+elementos que a su vez son del tipo `object`. Los arrays se delimitan (en JavaScript) usando corchetes (`[` y `]`), y los objetos se delimitan con llaves
+(`{` y `}`). La diferencia se ve más claramente aquí:
+
+
+ al problema:
+
+{% highlight js %}
+var cocineros = [
+        {
+            nombre: "Karlos Argiñano",
+            año_de_nacimiento: 1753,
+            lcohólico: true,
+        },
+        {
+            nombre: "Juan Mari Arzak",
+            año_de_nacimiento: 1942,
+            alcohólico: false,
+        },
+    ];
+{% endhighlight %}
 
 ---
 
