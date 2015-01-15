@@ -94,7 +94,7 @@ body {
   font-size: 14px;
   color: #333333;
   background-color: #efefef;
-  background: #efefef url("../images/paper.png") no-repeat center top;
+  background: #efefef url("../images/paper.png") repeat center top;
   margin: 0;
   line-height: 1.8em;
   -webkit-font-smoothing: antialiased;
@@ -447,3 +447,4 @@ footer {
     color: #444;
   }
 }
+/*# sourceMappingURL=styles.css.map */
