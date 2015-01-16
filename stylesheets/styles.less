@@ -8,6 +8,10 @@
 @secondary-color: #8f8;
 @link-color: #c30043;
 
+@body-font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@title-font-stack: 'Arvo', Georgia, serif;
+@code-font-stack: "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+
 @import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
 
 /* MeyerWeb Reset */
@@ -35,20 +39,17 @@ time, mark, audio, video {
 /* Base text styles */
 
 body {
-    padding: 10px 0 0 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: @foreground-color;
-    background-color: @background-color;
     background: @background-color url("../images/paper.png") repeat center top;
+    color: @foreground-color;
+    padding: 10px 0 0;
+    font: normal 14px/1.8em @body-font-stack;
     margin: 0;
-    line-height: 1.8em;
-    -webkit-font-smoothing: antialiased;
     border-top: 15px solid @link-color;
     overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: @title-font-stack;
     color: lighten(@foreground-color, 5%);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -56,19 +57,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, dl {
-    margin:0 0 22px;
+    margin: 0 0 22px;
 }
 
 h1, h2, h3 {
-    font-family: Arvo, Monaco, serif;
-    line-height:1.3;
+    border-bottom: 1px solid #ccc;
+    display: block;
     font-weight: normal;
+    line-height: 1.3;
+    padding-bottom: 5px;
 }
 
-h1,h2, h3 {
-    display: block;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+h4, h5, h6 {
+    font-weight: 700;
 }
 
 h1 {
@@ -83,15 +84,10 @@ h3 {
     font-size: 18px;
 }
 
-h4, h5, h6 {
-    font-family: Arvo, Monaco, serif;
-    font-weight: 700;
-}
-
 a {
-    color:@link-color;
-    font-weight:200;
-    text-decoration:none;
+    color: @link-color;
+    font-weight: 200;
+    text-decoration: none;
 }
 
 a:hover {
@@ -107,7 +103,7 @@ em {
 }
 
 strong {
-    font-weight:700;
+    font-weight: 700;
 }
 
 ul {
@@ -141,10 +137,10 @@ dl p {
 }
 
 hr {
-    border:0;
-    background:#ccc;
-    height:1px;
-    margin:0 0 24px;
+    border: 0;
+    background: #ccc;
+    height: 1px;
+    margin: 0 0 24px;
 }
 
 /* Images */
@@ -170,36 +166,36 @@ p img {
 /* Code blocks */
 
 code, pre {
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color:#000;
-    font-size:14px;
+    font-family: @code-font-stack;
+    color: #000;
+    font-size: 14px;
 }
 
 pre {
-    padding: 4px 12px;
     background: #FDFEFB;
-    border-radius:4px;
-    border:1px solid #D7D8C8;
+    border-radius: 4px;
+    border: 1px solid #D7D8C8;
+    margin-bottom: 32px;
+    padding: 4px 12px;
     overflow: auto;
     overflow-y: hidden;
-    margin-bottom: 32px;
 }
-
 
 /* Tables */
 
 table {
-    width:100%;
+    width: 100%;
 }
 
 table {
     border: 1px solid #ccc;
+    font-family: @body-font-stack;
     margin-bottom: 32px;
     text-align: left;
  }
 
 th {
-    font-family: 'Arvo', Helvetica, Arial, sans-serif;
+    font-family: @title-font-stack;
     font-size: 18px;
     font-weight: normal;
     padding: 10px;
@@ -212,12 +208,17 @@ td {
     background: #ccc;
  }
 
-/* Wrapper */
 .wrapper {
-    width:960px;
+    width: 960px;
 }
 
-/* Navigation */
+a.name {
+    white-space: nowrap;
+}
+
+/////////////
+// SIDEBAR //
+/////////////
 
 #nav {
     background-color: rgba(0, 0, 0, 0.9);
@@ -239,14 +240,13 @@ td {
     }
 
     h1.header {
-        font-family: Arvo, sans-serif;
+        font-family: @title-font-stack;
         font-size: 30px;
         font-weight: 300;
         line-height: 1.3em;
         border-bottom: none;
         margin-top: 0;
     }
-
 
     h1.header, a.header, a.name, header a{
         color: #fff;
@@ -262,7 +262,7 @@ td {
 
     ul {
         list-style-type: none;
-        padding:0;
+        padding: 0;
     }
 
     ol {
@@ -297,12 +297,6 @@ td {
         }
     }
 }
-
-
-a.name {
-    white-space: nowrap;
-}
-
 
 //////////////
 // SECTIONS //
@@ -341,7 +335,7 @@ section {
         border: 1px solid darken(@background-color, 15%);
         padding: 1px 3px;
         line-height: 1.1;
-        font-family: consolas, monospace;
+        font-family: @code-font-stack;
     }
 }
 
