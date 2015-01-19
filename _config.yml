@@ -14,3 +14,6 @@ lessons:
   - 
     number: 4
     title: "Control de flujo"
+  - 
+    number: 5
+    title: "Funciones"

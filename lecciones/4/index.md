@@ -3,7 +3,7 @@ title: 4. Control de flujo
 layout: default
 ---
 
-<div style="background-color: #900; text-align: center; width: 100%; padding: 40px; color: white; font-weight: bold; text-align-enter">(>'.')> flow <('.'<)</div>
+<div style="background-color: #900; text-align: center; width: 100%; padding: 40px; color: white; font-weight: bold; text-align-enter; font-family: monospace">(>'.')>&nbsp;&nbsp;&nbsp;flow&nbsp;&nbsp;&nbsp;<('.'<)</div>
 
 Vamos a programar de verdad. Creo que lo mejor va a ser que escriba un trozo de código y lo explique línea 
 por línea.
