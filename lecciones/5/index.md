@@ -254,7 +254,7 @@ function peso($nombre)
         $peso = $peso + ord($nombre[$i]);
     }
 
-    echo $nombre . ' pesa ' . $peso . ' kg.';
+    return $peso;
 }
 
 // primero Garikoitz
@@ -265,10 +265,14 @@ $pesoDeAgurtzane = peso("Agurtzane Mendikozelaia Agirrebeitia");
 
 {% endhighlight %}
 
-He eliminado, de paso, las variables `$nombre`, porque era supérfluas. Ahora tenemos el peso de ambas
-personas, y podemos imprimir ambos valores a nuestra manera:
+Dentro de la función podemos usar el comando `return` para que la función devuelva un valor. A la hora de la llamada, 
+podemos usar la función como si fuese un valor, y asignarlo a variables. Ahora tenemos el peso de ambas
+personas en dos variables, y podemos imprimir ambos valores a nuestra manera:
 
+> He eliminado, de paso, las variables `$nombre`, porque eran supérfluas.
 
 {% highlight php %}
 echo "Garikoitz pesa " . $pesoDeGarikoitz . " y Agurtzane pesa " . $pesoDeAgurtzane.
 {% endhighlight %}
+
+Superultracool.
