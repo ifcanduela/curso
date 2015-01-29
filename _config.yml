@@ -1,19 +1,56 @@
 baseurl: /curso
 highlighter: pygments
 layout: default
+markdown: kramdown
+kramdown:
+  input: GFM
 lessons: 
   - 
     number: 1
+    section: "fundamentos"
     title: Introducción
   - 
     number: 2
+    section: "fundamentos"
     title: "Variables y números"
   - 
     number: 3
+    section: "fundamentos"
     title: "Tipos de datos"
   - 
     number: 4
+    section: "fundamentos"
     title: "Control de flujo"
   - 
     number: 5
+    section: "fundamentos"
+    title: "Alternativas"
+  - 
+    number: 6
+    section: "fundamentos"
     title: "Funciones"
+oop:
+  - 
+    number: 1
+    section: "oop"
+    title: "Clases y objetos"
+  - 
+    number: 2
+    section: "oop"
+    title: "Diseño de clases"
+  - 
+    number: 3
+    section: "oop"
+    title: "Encapsulación"
+  - 
+    number: 4
+    section: "oop"
+    title: "Herencia"
+  - 
+    number: 5
+    section: "oop"
+    title: "Interfaces"
+  - 
+    number: 6
+    section: "oop"
+    title: "Namespaces"

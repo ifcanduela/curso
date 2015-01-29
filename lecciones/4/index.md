@@ -162,4 +162,6 @@ de texto tenemos que usar el punto, no el signo `+`. El resultado de este comand
 
     Garikoitz Subijana Lertxundi pesa 2478 kg.
 
-Y con eso termina el programa, de momento.
+Y con eso termina el programa, de momento. Lo siguiente es el `if`.
+
+

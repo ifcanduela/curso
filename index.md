@@ -33,7 +33,7 @@ fácil de usar es [Notepad++](http://notepad-plus-plus.org/), pero yo recomiendo
 
 Para ejecutar nuestros programas nuestro ordenador necesitamos **entornos de desarrollo**. Para JavaScript 
 es fácil: Google Chrome y Mozillla Firefox tienen entornos de desarrollo integrados en el navegador. Otros 
-lenguajes como C++ Java, , PHP, Python o Ruby requieren la instalación de ciertas librerías (llamadas 
+lenguajes como C++ Java, PHP, Python o Ruby requieren la instalación de ciertas librerías (llamadas 
 *runtimes*) que permiten la compilación de programas escritos en su respectivo lenguaje.
 
 ## Idiomas

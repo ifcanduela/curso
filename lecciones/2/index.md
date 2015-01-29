@@ -117,7 +117,7 @@ eso es necesario *definirlas* (asignarles un valor) previamente. Algunos lenguag
 
 {% highlight java %}
 int doce = 12;
-{% endhighlight %}
+{% endhighlight  %}
 
 En realidad, las variables siempre tienen un tipo. Lenguajes como
 JavaScript o PHP son capaces de detectar el tipo de una variable a
@@ -125,7 +125,7 @@ partir del tipo de los datos que asignamos:
 
 {% highlight js %}
 trece = 12 + 1;
-{% endhighlight %}
+{% endhighlight  %}
 
 En JavaScript, una variable creada como `trece` en el ejemplo anterior
 tendrá un tipo `Number`, que hace que se comporte como un número. Más 
@@ -133,4 +133,4 @@ información acerca de tipos de datos en la próxima lección.
 
 ---
 
-En el próximo episodio vamos a usar JsFiddle para hacer algo más que sumar números
+En el próximo episodio vamos a hacer algo más que sumar números.

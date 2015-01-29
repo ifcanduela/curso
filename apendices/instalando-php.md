@@ -1,6 +1,6 @@
 ---
 title: Instalando PHP
-layout: loading-pages
+layout: default
 ---
 
 En este artículo voy a explicar, con los detalles necesarios, cómo instalar y configurar PHP
