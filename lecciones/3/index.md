@@ -10,7 +10,7 @@ la parte decimal. Llegará un momento en el que quieras decir *Hola* al mundo, y
 no nos valen los números.
 
 > Ha, eso es falso. Puedes escribir *Hola* haciendo esto:
-```js
+{% highlight js %}
 String.fromCharCode(72, 111, 108, 97);
 {% endhighlight %}
 
@@ -23,7 +23,7 @@ de caracteres y realizar operaciones especiales con ellas. En la mayoría de len
 se pueden crear strings rodeando el texto con dobles comillas (`"`). Por ejemplo,
 esto es JavaScript:
 
-```js
+{% highlight js %}
 var miNombre = "Ramón García";
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ dobles comillas para indicar el inicio de una cadena, los datos, y otras dobles 
 indicar el fin de los datos. Muchos lenguajes también permiten insertar dobles comillas
 en los datos usando un método llamado *secuencias de escapes*:
 
-```js
+{% highlight js %}
 var miNombre = "Juanito \"Animal\" Oiarzabal";
 {% endhighlight %}
 
@@ -79,14 +79,14 @@ int doce = 12;
 
 y luego otro en JavaScript así:
 
-```js
+{% highlight js %}
 trece = 12 + 1;
 {% endhighlight %}
 
 JavaScript no requiere que especifiquemos el tipo de datos de una variable. De hecho, la misma variable
 puede almacenar diferentes tipos de datos en sucesión:
 
-```js
+{% highlight js %}
 trece = 12 + 1;
 trece = 13.0;
 trece = "XIII"
@@ -137,7 +137,7 @@ ser *verdadero* o *falso*, y se representan con valores del tipo *bool*.
 Combinando variables, tipos de datos y operadores se pueden crear pequeños programas
 que no cumplen ninguna función:
 
-```js
+{% highlight js %}
 var miNombre = "Igor";
 var miEdad = 12;
 var miAltura = 1.77;
@@ -152,7 +152,7 @@ valores apropiados; un *string*, un *int* y un *float*, respectivamente.
 La última línea es diferente: creamos una nueva variable, `yo`, pero no le asignamos un valor directo. Puede ser un poco
 difícil de leer, pero por suerte podemos dividirlo en líneas:
 
-```js
+{% highlight js %}
 var yo = "Me llamo " 
        + miNombre 
        + ", tengo " 
@@ -190,7 +190,7 @@ representar algún concepto del mundo real, y esos conceptos suelen ser más com
 Para representar estos elementos necesitamos agrupar datos en formas claras que nos ayuden a entender lo
 que estamos haciendo. Por ejemplo, si queremos hacer un programa que gestione cocineros, podemos escribir esto:
 
-```js
+{% highlight js %}
 var cocinero_1_nombre = "Karlos Argiñano",
     cocinero_1_año_de_nacimiento = 1753,
     cocinero_1_alcohólico = true;
@@ -203,7 +203,7 @@ var cocinero_1_nombre = "Juan Mari Arzak",
 Pero no es manejable, especialmente en Euskal Herria, donde cualquiera es un cocinero digno de la guía Michelin. Los tipos compuestos
 son una solución práctica al problema:
 
-```js
+{% highlight js %}
 var cocineros = [
         {
             nombre: "Karlos Argiñano",
@@ -225,7 +225,7 @@ elementos que a su vez son del tipo `object`. Los arrays se delimitan (en JavaSc
 
  al problema:
 
-```js
+{% highlight js %}
 var cocineros = [
         {
             nombre: "Karlos Argiñano",
